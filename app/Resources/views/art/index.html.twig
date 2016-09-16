@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Art list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for art in arts %}
+            <tr>
+                <td><a href="{{ path('art_show', { 'id': art.id }) }}">{{ art.id }}</a></td>
+                <td>{{ art.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('art_show', { 'id': art.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('art_edit', { 'id': art.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('art_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

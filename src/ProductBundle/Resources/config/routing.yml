@@ -1,0 +1,10 @@
+product_art:
+    resource: "@ProductBundle/Resources/config/routing/art.yml"
+    prefix:   /art
+
+product_homepage_default:
+    path:     /
+    defaults: { _controller: ProductBundle:Default:index }
+product_homepage:
+    path:     /product
+    defaults: { _controller: ProductBundle:Default:index }

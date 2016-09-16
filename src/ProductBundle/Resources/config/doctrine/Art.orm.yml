@@ -1,0 +1,16 @@
+ProductBundle\Entity\Art:
+    type: entity
+    table: null
+    repositoryClass: ProductBundle\Repository\ArtRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '30'
+            nullable: true
+    lifecycleCallbacks: {  }

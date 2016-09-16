@@ -1,0 +1,24 @@
+art_index:
+    path:     /
+    defaults: { _controller: "ProductBundle:Art:index" }
+    methods:  GET
+
+art_show:
+    path:     /{id}/show
+    defaults: { _controller: "ProductBundle:Art:show" }
+    methods:  GET
+
+art_new:
+    path:     /new
+    defaults: { _controller: "ProductBundle:Art:new" }
+    methods:  [GET, POST]
+
+art_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ProductBundle:Art:edit" }
+    methods:  [GET, POST]
+
+art_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ProductBundle:Art:delete" }
+    methods:  DELETE
